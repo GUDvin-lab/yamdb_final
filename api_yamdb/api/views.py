@@ -11,6 +11,7 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
 from rest_framework_simplejwt.tokens import RefreshToken
 
+
 from .filters import TitleFilter
 from .permissions import (
     IsAdminUserOrReadOnly,
@@ -22,7 +23,6 @@ from .serializers import (
     ReviewSerializer, SignUpSerializer, TitleGetSerializer,
     TitleNotGetSerializer, TokenSerializer, UserSerializer
 )
-
 from reviews.models import User, Category, Genre, Title, Review
 
 

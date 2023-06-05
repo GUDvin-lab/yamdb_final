@@ -4,9 +4,7 @@ from django.core.exceptions import ValidationError
 from rest_framework.validators import UniqueValidator
 
 from django.shortcuts import get_object_or_404
-
 from django.core.validators import (MinValueValidator, MaxValueValidator,)
-
 from rest_framework.serializers import (
     CharField, IntegerField, ModelSerializer, EmailField,
     PrimaryKeyRelatedField, SlugRelatedField
