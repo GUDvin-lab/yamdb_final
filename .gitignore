@@ -150,3 +150,5 @@ static/
 posts/static/
 media/
 
+# папки сгенерированных email
+sent_emails/
