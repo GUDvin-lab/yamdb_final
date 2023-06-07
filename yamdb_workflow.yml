@@ -20,7 +20,7 @@ jobs:
         # установка flake8 и его плагинов
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         # установка зависимостей
-        pip install -r requirements.txt 
+        pip install -r api_yamdb/requirements.txt 
 
     - name: Test with flake8 and django tests
       run: |
@@ -52,7 +52,8 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: antikent/yamdb_final:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
+          file: api_yamdb/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest

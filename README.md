@@ -15,6 +15,7 @@ REST API для плафтормы Yamdb
 
 ```
 git clone git@github.com:GUDvin-lab/infra_sp2.git
+```
 
 ```
 cd infra_sp2
