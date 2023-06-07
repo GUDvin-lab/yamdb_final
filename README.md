@@ -14,31 +14,30 @@ REST API для плафтормы Yamdb
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-git clone git@github.com:GUDvin-lab/infra_sp2.git
+git clone git@github.com:GUDvin-lab/yamdb_final.git
 ```
 
 ```
-cd infra_sp2
+cd yamdb_final
 ```
 
-Cоздать и активировать виртуальное окружение:
+Создать файл .env в папке:
 
 ```
-py -3.7 -m venv 
+touch .env
 ```
 
-```
-. venv/bin/activate
-```
-
-Установить зависимости из файла requirements.txt:
+Заполнить файл .env:
 
 ```
-python3 -m pip install --upgrade pip
-```
+echo "DB_ENGINE=django.db.backends.postgresql" > .env
+echo "DB_NAME=postgres" >> .env
+echo "POSTGRES_USER=postgres" >> .env
+echo "POSTGRES_PASSWORD=postgres" >> .env
+echo "DB_HOST=db" >> .env
+echo "DB_PORT=5432" >> .env
+echo "KEY='<указываем ключ для settings>'" >> .env
 
-```
-pip install -r api_yamdb/requirements.txt
 ```
 
 Переходим в папку infra/ с файлом docker-compose.yaml:
@@ -50,8 +49,6 @@ Cоберите контейнеры и запустите их:
 ```
 docker-compose up -d --build
 ```
-
-Выполнить миграции:
 
 Выполняем миграции:
 ```
